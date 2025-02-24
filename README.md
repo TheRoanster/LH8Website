@@ -1,4 +1,4 @@
-# MadHacks 2023
+# LancerHacks VIII
 
 ## 🚀 Project Structure
 

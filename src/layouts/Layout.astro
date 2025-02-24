@@ -11,8 +11,9 @@ import AppHeader from "../components/AppHeader.astro"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="MadHacks is the largest hackathon in Wisconsin!">
-		<title>MadHacks 2024</title>
+		<meta name="description" content="LancerHacks 2025">
+		<title>LancerHacks 2025</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH0Y6yJv9Q4hXlC1QnZ5XWf/f4Yf+R9p/J0+U2W/oGg1x79iL9tO+h/Uo49u10/I+0fVjLp0d+r3fH0e2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<style>
 			@font-face {
 				font-family: 'Nunito Sans';
@@ -32,8 +33,7 @@ import AppHeader from "../components/AppHeader.astro"
 			}
 		</style>
 	</head>
-	<body class="bg-gray-900 h-full">
-		<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2024 Hackathon Season" style="width:100%"></a>
+	<body class="bg-black h-full">
 		<slot />
 		<AppFooter/>
 	</body>
@@ -51,3 +51,4 @@ import AppHeader from "../components/AppHeader.astro"
 		margin: 0;
 	}
 </style>
+

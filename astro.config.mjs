@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,5 +13,5 @@ export default defineConfig({
     "/devpost": "https://madhacks.devpost.com",
     "/project": "https://airtable.com/appJa8ymShCTPpH9I/pag0C9Q3PGBC9qArU/form"
   },
-  integrations: [sitemap(), tailwind(), compress()]
+  integrations: [sitemap(), tailwind(), compress(), react()]
 });

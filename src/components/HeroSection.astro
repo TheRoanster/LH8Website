@@ -2,96 +2,179 @@
 import Container from "./Container.astro";
 import { Picture } from "astro:assets";
 import logo from "../images/logo.png";
-import Starfield from "./Starfield.astro";
+
+
 ---
 
-<div class="relative min-h-full flex">
-  <Starfield />
-  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-20">
-    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400"></div>
-    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"></div>
-  </div>
-  <Container class="w-full">
-    <div class="relative pb-16 pt-16 sm:pt-10 sm:pb-20 ml-auto min-h-full flex items-center">
-      <div class="lg:w-2/3 text-center mx-auto">
-        <h1 class="font-header text-white font-semibold text-5xl md:text-6xl xl:text-7xl">MadHacks</h1>
-        <p class="text-cyan-300 text-md md:text-lg xl:text-xl">University of Wisconsin–Madison</p>
-        <Picture
-          style="animation: 5s ease-in-out 0s infinite dropShadow"
-          loading="eager"
-          alt="MadHacks Brain and Blue Wave Logo"
-          class="mx-auto flex justify-center my-6 w-64 md:w-80 xl:w-96 h-52 md:h-64 xl:h-80"
-          src={logo}
-          aspectRatio="6:5"
-          sizes="(min-width: 1280px) 384px, (min-width: 768px) 320px, 256px"
-          widths={[256, 320, 384, 512, 640, 768]}
-          formats={["avif", "webp", "png"]}
-          quality={90}
-        />
-        <!-- <h2 class="font-header text-white font-semibold text-3xl md:text-4xl xl:text-5xl mb-4">We're Back!</h2> -->
-        <h2 class="font-header text-white font-semibold text-3xl md:text-4xl xl:text-5xl mb-4">See you next year!</h2>
-        <h3 class="text-white text-lg md:text-xl xl:text-2xl mb-2"><b>November 9th & 10th, 2024</b></h3>
-        <h4 class="text-white text-sm md:text-md xl:text-lg">Location: <b>Educational Sciences Building</b></h4>
-        <h4 class="text-white text-sm md:text-md xl:text-lg">1025 W Johnson St, Madison, WI</h4>
-        <!-- <a href="https://docs.google.com/document/d/1x5AFNqnvfy1fWB5tLvOd0UXyQFETPc-0mnZ-r-5V43w/edit?usp=sharing" target="_blank" title="Apply Now" class="ml-auto text-xl font-bold text-white inline-block py-4 px-8 mt-6 rounded-lg text-center transition bg-gradient-to-br from-primary to-sky-600 hover:to-sky-700 active:to-sky-900 focus:to-sky-800"> -->
-        <!--     RESOURCES & COMPANY CHALLENGE INFO -->
-        <!-- </a> -->
-        <!-- <br/> -->
-        <!-- <a href="/walkin" target="_blank" title="Apply Now" class="ml-auto text-xl font-bold text-white inline-block py-4 px-8 mt-6 rounded-lg text-center transition bg-gradient-to-br from-primary to-sky-600 hover:to-sky-700 active:to-sky-900 focus:to-sky-800"> -->
-        <!--     WALK IN REGISTRATION -->
-        <!-- </a> -->
-
-        <!--<a href="https://gist.github.com/Nicell/94281a36f9b900b54a334bb61a944f10" target="_blank" title="Get Notified" class="ml-auto text-xl font-bold text-white inline-block py-4 px-8 mt-6 rounded-lg text-center transition bg-gradient-to-br from-primary to-sky-600 hover:to-sky-700 active:to-sky-900 focus:to-sky-800">
-                  JUDGING
-                </a>-->
-        <!-- <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                    <a
-                      href="#"
-                      class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-                    >
-                      <span class="relative text-base font-semibold text-white"
-                        >Get started</span
-                      >
-                    </a>
-                    <a
-                      href="#"
-                      class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-                    >
-                      <span
-                        class="relative text-base font-semibold text-primary dark:text-white"
-                        >Learn more</span
-                      >
-                    </a>
-                </div>
-                <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The lowest price</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
-                    </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The fastest on the market</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
-                    </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The most loved</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
-                    </div>
-                </div>
-            </div> -->
+<div class="relative min-h-screen flex bg-black">
+  <div class="hero-section w-full relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="grid-container">
+      <div class="plane">
+        <div class="grid"></div>
+        <div class="glow"></div>
+      </div>
+      <div class="plane">
+        <div class="grid"></div>
+        <div class="glow"></div>
       </div>
     </div>
-  </Container>
+
+    <Container class="w-full relative z-10">
+      <div class="pb-16 pt-16 sm:pt-10 sm:pb-20 ml-auto min-h-full flex items-center">
+        <div class="lg:w-2/3 text-center mx-auto">
+          <h1 id="typewriter"></h1>
+          <Picture
+            style="infinite dropShadow"
+            loading="eager"
+            alt="LancerHacks Logo"
+            class="mx-auto flex justify-center my-6 w-64 md:w-80 xl:w-96 h-52 md:h-64 xl:h-80"
+            src={logo}
+            sizes="(min-width: 1280px) 384px, (min-width: 768px) 320px, 256px"
+            widths={[256, 320, 384, 512, 640, 768]}
+            formats={["avif", "webp", "png"]}
+            quality={90}
+          />
+          <div class="flex justify-center mt-4">
+            <a href="https://docs.google.com/forms/d/1r9PW7EOFitasptbA9f12gQAdYZCCmgDQc-4VfRGdgNw/viewform?edit_requested=true" class="font-header text-white font-semibold text-3xl md:text-4xl xl:text-5xl mb-4 bg-black hover:text-blue-500 active:to-sky-900 focus:to-sky-800 px-6 py-3 rounded-lg transition-colors duration-300 underline">
+              Sign Up Here!
+            </a>          
+          </div>
+          <h3 class="text-white text-lg md:text-xl xl:text-2xl mb-2"><b>March 22nd, 2025</b></h3>
+          <h4 class="text-white text-sm md:text-md xl:text-lg">Location: <b>Innovation Center @ Saint Francis High School</b></h4>
+          <h4 class="text-white text-sm md:text-md xl:text-lg">1885 Miramonte Ave, Mountain View, CA</h4>
+        </div>
+      </div>
+    </Container>
+  </div>
   <style>
+    
     @keyframes dropShadow {
-      0% {
-        filter: drop-shadow(0px 0px 25px #0096b1c0);
-      }
-      50% {
-        filter: drop-shadow(0px 0px 10px #0096b1a0);
-      }
-      100% {
-        filter: drop-shadow(0px 0px 25px #0096b1c0);
+      0% { filter: drop-shadow(0px 0px 25px #0096b1c0); }
+      50% { filter: drop-shadow(0px 0px 10px #0096b1a0); }
+      100% { filter: drop-shadow(0px 0px 25px #0096b1c0); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .grid-container {
+      --grid: 10rem;
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-style: preserve-3d;
+      perspective: 100rem;
+      animation: rotate 100s linear infinite forwards;
+    }
+    h1 {
+      color: green;
+      font-family: 'Share Tech Mono', 'Cascadia Code', monospace;
+      font-size: 5rem;
+      filter: drop-shadow(0px 0px 5px currentColor);  
+      &::after {
+        content: '';
+        display: inline-block;
+        width: .2em;
+        height: .7em;
+        background-color: currentColor;
+        margin-left: .1em;
+        animation: blink 1s infinite ;
+        vertical-align: baseline;
       }
     }
+    .plane {
+      --dir: 1;
+      width: 300%;
+      height: 150%;
+      min-height: 70rem;
+      position: absolute;
+      bottom: 0;
+      transform-style: preserve-3d;
+      transform-origin: bottom center;
+      transform: translateX(-50%) rotateX(85deg);
+    }
+
+    .plane:last-child {
+      --dir: -1;
+      top: 0;
+      transform-origin: top center;
+      transform: translateX(-50%) rotateX(-85deg);
+    }
+
+    .plane > * {
+      transform-style: preserve-3d;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    .plane > *::before, .plane > *::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .plane > *::before {
+      background-image: repeating-linear-gradient(to left, green, green 4px, transparent 4px, transparent var(--grid)),
+        repeating-linear-gradient(to bottom, green, green 4px, transparent 4px, transparent var(--grid));
+      animation: move 1s linear infinite forwards;
+    }
+
+    .plane > *::after {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 255) var(--grid), rgba(0, 0, 0, 0));
+      z-index: 1;
+      transform: translateZ(1px);
+    }
+
+    .glow {
+      filter: blur(1rem);
+      z-index: 1;
+      mix-blend-mode: plus-lighter;
+    }
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+    @keyframes move {
+      from { transform: translateY(0px); }
+      to { transform: translateY(calc(var(--grid) * var(--dir))); }
+    }
   </style>
+   
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const text = "LancerHacks VIII";
+    const speed = 50;
+    let i = 0;
+    const typewriterElement = document.getElementById("typewriter");
+    function typeWriter() {
+      if (typewriterElement && i < text.length) {
+        typewriterElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    if (typewriterElement) {
+      typeWriter();
+    }
+  });
+</script>
+
 </div>
