@@ -3,15 +3,12 @@ import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import node from '@astrojs/node';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://www.madhacks.io',
-  redirects: {
-    "/apply": "https://airtable.com/appJa8ymShCTPpH9I/pag4LEoIQeaesXAfw/form",
-    "/walkin": "https://airtable.com/appJa8ymShCTPpH9I/paghpcEx85qF2eOAr/form",
-    "/devpost": "https://madhacks.devpost.com",
-    "/project": "https://airtable.com/appJa8ymShCTPpH9I/pag0C9Q3PGBC9qArU/form"
-  },
+  output: 'server',
+  adapter: node({
+    mode: 'middleware',
+  }),
   integrations: [sitemap(), tailwind(), compress(), react()]
 });
