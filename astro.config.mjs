@@ -8,7 +8,7 @@ import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   site: 'https://lancerhacks.github.io',
-  base: '/MadHacks2023',
+  base: '/LH8Website',
   integrations: [sitemap(), tailwind(), compress(), react()]
 })
 
